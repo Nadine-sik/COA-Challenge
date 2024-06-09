@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            box-sizing: border-box;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Photo {
+            margin: 10px;
+            position: relative;
+            opacity: 1;
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+            max-width: calc(100% - 20px); /* Ensure margin doesn't cause overflow */
+        }
+
+        .Photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: filter 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            padding: 10px;   
+            opacity: 1; /* Start hidden */
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .text-overlay p, .text-overlay span, .text-overlay pre {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        .text-overlay span, .text-overlay pre {
+            padding: 5px 10px;
+        }
+
+        .text-overlay a {
+            color: white;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        /* Show text-overlay on hover */
+        .Photo:hover .text-overlay {
+            opacity: 1;
+        }
+
+        /* Apply black and white effect on image hover */
+        .Photo:hover img {
+            filter: grayscale(100%);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="Photo">
+            <img src="Image1.png" alt="Thumbnail 1" data-fullsize="fullsize1.jpg" style="position: relative;">
+            <div class="text-overlay">
+                <p style="font-weight: bold;">FENNIC <br>FOX</p>
+                <span>India</span>
+                <pre style="color: lightskyblue;">know more <a href="#" style="color: lightskyblue;"><i class="fas fa-arrow-right"></i></a></pre> <!-- Arrow icon -->
+            </div>
+        </div>
+        <div class="Photo">
+            <img src="Image.png" alt="Thumbnail 2" data-fullsize="fullsize2.jpg" style="position: relative;">
+            <div class="text-overlay">
+                <p style="font-weight: bold;">HUMPBACK <br>WHALE</p>
+                <span>South Africa</span>
+                <pre style="color: lightskyblue;">Read more <a href="#" style="color: lightskyblue;"><i class="fas fa-arrow-right"></i></a></pre> <!-- Arrow icon -->
+            </div>
+        </div>
+        <div class="Photo">
+            <img src="Ima.png" alt="Thumbnail 3" data-fullsize="fullsize3.jpg" style="position: relative;">
+            <div class="text-overlay">
+                <p style="font-weight: bold;">COMMON BROWN <br>BABOON</p>
+                <span>South Africa</span>
+                <pre style="color: lightskyblue;">Know more <a href="#" style="color: lightskyblue;"><i class="fas fa-arrow-right"></i></a></pre> <!-- Arrow icon -->
+            </div>
+        </div>
+        <div class="Photo">
+            <img src="Im.png" alt="Thumbnail 4" data-fullsize="fullsize4.jpg" style="position: relative;">
+            <div class="text-overlay">
+                <p style="font-weight: bold;">SPOTTED <br>DEER</p>
+                <span>Amazon</span>
+                <pre style="color: lightskyblue;">Know more <a href="#" style="color: lightskyblue;"><i class="fas fa-arrow-right"></i></a></pre> <!-- Arrow icon -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
